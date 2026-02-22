@@ -103,7 +103,9 @@ if __name__ == "__main__":
         userUrl = sys.argv
         if len(userUrl) == 2:
             userUrl = sys.argv[1]
-            print(loadUrl(userUrl))
+            content = loadUrl(userUrl)
+            for i in content:
+                print(f"The {i} is --> {content[i]}")
         elif len(userUrl) >= 3:
             userUrl1 = sys.argv[1]
             userUrl2 = sys.argv[2]
