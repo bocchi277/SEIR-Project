@@ -50,8 +50,8 @@ pip install -r requirements.txt
 
 ### Run Project1
 
-python Project1.py <URL>
+python Project1.py `<URL>`
 
 ### Run Project2
 
-python Project2.py <URL1> <URL2>
+python Project2.py `<URL1>` `<URL2>`
