@@ -27,7 +27,46 @@ def hash_func(word):
     return hash_val
 def simHash(freq):
     weight = [0]*64
-    stopWords = {"i", "me", "my", "myself", "we", "our", "ours", "ourselves", "you", "your", "yours", "yourself", "yourselves", "he", "him", "his", "himself", "she", "her", "hers", "herself", "it", "its", "itself", "they", "them", "their", "theirs", "themselves", "what", "which", "who", "whom", "this", "that", "these", "those", "am", "is", "are", "was", "were", "be", "been", "being", "have", "has", "had", "having", "do", "does", "did", "doing", "a", "an", "the", "and", "but", "if", "or", "because", "as", "until", "while", "of", "at", "by", "for", "with", "about", "against", "between", "into", "through", "during", "before", "after", "above", "below", "to", "from", "up", "down", "in", "out", "on", "off", "over", "under", "again", "further", "then", "once", "here", "there", "when", "where", "why", "how", "all", "any", "both", "each", "few", "more", "most", "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so", "than", "too", "very", "s", "t", "can", "will", "just", "don", "should", "now"}
+    stopWords = {
+    "a","about","above","according","across","after","afterwards","again","against",
+    "albeit","all","almost","alone","along","already","also","although","always",
+    "am","among","amongst","an","and","another","any","anybody","anyhow","anyone",
+    "anything","anyway","anywhere","apart","are","around","as","at","be","became",
+    "because","become","becomes","becoming","been","before","beforehand","behind",
+    "being","below","beside","besides","between","beyond","both","but","by","can",
+    "cannot","canst","certain","cf","choose","contrariwise","cos","could","cu",
+    "day","do","does","doesn't","doing","dost","doth","down","dual","during","each",
+    "either","else","elsewhere","enough","et","etc","even","ever","every","everybody",
+    "everyone","everything","everywhere","except","far","farther","farthest","few",
+    "first","for","formerly","forth","forward","from","further","furthermore",
+    "furthest","get","go","had","hardly","has","hast","hath","have","he","hence",
+    "henceforth","her","here","hereabouts","hereafter","hereby","herein","hereto",
+    "hereupon","hers","herself","him","himself","his","hither","hitherto","how",
+    "however","howsoever","i","ie","if","in","inasmuch","indeed","indoors","inside",
+    "insomuch","instead","into","inward","inwards","is","it","its","itself","just",
+    "kind","last","latter","latterly","less","lest","let","like","little","many",
+    "may","maybe","me","meantime","meanwhile","might","more","moreover","most",
+    "mostly","much","must","my","myself","namely","need","neither","never",
+    "nevertheless","next","no","nobody","none","nonetheless","noone","nor","not",
+    "nothing","notwithstanding","now","nowadays","nowhere","of","off","often","ok",
+    "on","once","one","only","onto","or","other","others","otherwise","ought",
+    "our","ours","ourselves","out","outside","over","own","perhaps","plenty",
+    "quite","rather","really","round","said","same","see","seeing","seem",
+    "seemed","seeming","seems","seen","seldom","several","she","should","since",
+    "so","some","somebody","somehow","someone","something","sometime","sometimes",
+    "somewhat","somewhere","still","such","than","that","the","their","them",
+    "themselves","then","there","thereabout","thereabouts","thereafter","thereby",
+    "therefore","therein","thereof","thereon","thereto","thereupon","these","they",
+    "this","those","though","through","throughout","thru","thus","thy","thyself",
+    "till","to","together","too","toward","towards","under","underneath","unless",
+    "unlike","until","up","upon","upward","upwards","us","use","used","using",
+    "very","via","want","was","we","well","were","what","whatever","when","whence",
+    "whenever","where","whereabouts","whereafter","whereas","whereat","whereby",
+    "wherefore","wherefrom","wherein","whereinto","whereof","whereon","whereto",
+    "whereunto","whereupon","wherever","whether","which","while","whilst","whither",
+    "who","whoever","whole","whom","whose","why","will","with","within","without",
+    "would","ye","yet","you","your","yours","yourself","yourselves"
+}
     for word in freq:
         if word in stopWords:
             continue
