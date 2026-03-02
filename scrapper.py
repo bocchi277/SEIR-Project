@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import sys
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 import time
 def loadUrl(userUrl):
     driver = webdriver.Chrome()
